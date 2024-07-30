@@ -18,6 +18,7 @@ public class APITesting extends ExtentReportListner{
 		.get("http://localhost:8090/student-api/")
 		.then()
 		.statusCode(200).log().all();
+		test.log(LogStatus.PASS, "Get API  testing...");
 		test.log(LogStatus.PASS, "Get API  testing completed");
 	}
 	
@@ -26,6 +27,7 @@ public class APITesting extends ExtentReportListner{
 		given()
 		.when()
 		.post("http://localhost:8090/student-api/");
+		test.log(LogStatus.PASS, "Post API testing...");
 		test.log(LogStatus.PASS, "Post API testing completed");
 	}
 
